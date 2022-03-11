@@ -15,7 +15,6 @@ class Bot {
         this.getSkipButton = this.getSkipButton.bind(this);
         this.getVideo = this.getVideo.bind(this);
         this.onVideoEnded = this.onVideoEnded.bind(this);
-        this.onVideoPause = this.onVideoPause.bind(this);
         this.playVideo = this.playVideo.bind(this);
         this.skipVideo = this.skipVideo.bind(this);
         this.startAutoListening = this.startAutoListening.bind(this);
@@ -24,7 +23,6 @@ class Bot {
     bindAutoSkip() {
         console.log('자동 스킵 작업을 등록합니다.');
         this.getVideo().onended = this.onVideoEnded;
-        this.getVideo().onpause = this.onVideoPause;
     }
 
     bindAutoPlay() {
@@ -51,12 +49,6 @@ class Bot {
     onVideoEnded() {
         console.log('영상이 끝났습니다.');
         this.skipVideo();
-    }
-
-    onVideoPause() {
-        console.log('영상이 일시정지되었습니다.');
-        if (this.getVideo().ended)
-            this.onVideoEnded();
     }
 
     playVideo() {
