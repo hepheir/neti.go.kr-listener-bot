@@ -1,4 +1,4 @@
-javascript: (() => {
+(() => {
     function main() {
         let bot = new Bot(window);
         bot.startAutoListening();
