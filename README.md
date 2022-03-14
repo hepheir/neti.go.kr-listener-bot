@@ -23,7 +23,7 @@
 영상이 나오는 팝업창에서 다음의 코드를 실행하면 됩니다.
 
 ```javascript
-javascript: fetch('https://raw.githubusercontent.com/Hepheir/neti.go.kr-listener-bot/master/script.js').then(res=>res.text()).then(eval);
+javascript: fetch('https://raw.githubusercontent.com/Hepheir/neti.go.kr-listener-bot/v0.0.2/script.js').then(res=>res.text()).then(eval);
 ```
 
 아래의 두 방법 중 하나를 사용하면 됩니다.
